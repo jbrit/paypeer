@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Button, Checkbox, Form, Input, Row, Col, Typography } from "antd";
+import { Button, Form, Input, Row, Col, Typography } from "antd";
 
 export default function Login() {
   const onFinish = (values: any) => {
