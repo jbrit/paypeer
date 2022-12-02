@@ -4,13 +4,16 @@ import {
   MenuUnfoldOutlined,
   WalletOutlined,
   UserOutlined,
-  LogoutOutlined
+  LogoutOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Typography } from "antd";
 
 const { Header, Sider, Content } = Layout;
 
-const DashboardLayout: React.FC = () => {
+type DashboardLayoutProps = {
+  children?: React.ReactNode | undefined;
+};
+const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -18,7 +21,9 @@ const DashboardLayout: React.FC = () => {
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
           {collapsed ? (
-            <div style={{ color: "white", fontSize: "1.1rem", fontWeight: "500" }}>
+            <div
+              style={{ color: "white", fontSize: "1.1rem", fontWeight: "500" }}
+            >
               Pay
               <br />
               Peer
@@ -46,7 +51,6 @@ const DashboardLayout: React.FC = () => {
             },
           ]}
         />
-
       </Sider>
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }}>
@@ -66,8 +70,9 @@ const DashboardLayout: React.FC = () => {
             minHeight: 280,
           }}
         >
-          Content
+          {children}
         </Content>
+        <footer style={{ paddingBottom: ".75rem", textAlign: "center" }}>&copy; Paypeer 2022</footer>
       </Layout>
     </Layout>
   );

@@ -38,3 +38,12 @@ a {
 .site-layout .site-layout-background {
   background: #fff;
 }
+
+/* wallet page */
+.balance-card {
+  border: "1px solid black";
+  height: "270px";
+  border-radius: "1rem";
+  padding: "1.5rem";
+  position: relative;
+}
