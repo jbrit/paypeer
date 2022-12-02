@@ -1,6 +1,5 @@
 import { Col, Row, Divider, Typography, Button } from "antd";
 import Head from "next/head";
-import Link from "next/link";
 import { useState } from "react";
 import DashboardLayout from "../../components/layout";
 import Transactions from "../../components/transactions";
@@ -87,6 +86,76 @@ export default function Dashboard() {
           </Col>
           <Col span={11}>
             <Divider>Exchange</Divider>
+            <div className="exchange-card">
+              <div
+                style={{
+                  fontSize: "14px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <div style={{ display: "inline-block" }}>$ 1 USD = ₦ 400</div>
+                <div style={{ display: "inline-block", marginLeft: "auto" }}>
+                  <Button>Refresh</Button> (1s ago)
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "grid",
+                  position: "relative",
+                  gridTemplateColumns: "1fr 1fr",
+                  gridAutoRows: "auto",
+                  columnGap: "1rem",
+                  rowGap: 0,
+                  margin: "2rem 0 2rem",
+                }}
+              >
+                <div>NGN</div>
+                <div>USD</div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    background: "rgba(0,0,0,0.05)",
+                    borderRadius: "0.5rem",
+                    padding: ".5rem .75rem",
+                  }}
+                >
+                  <input
+                    style={{
+                      border: "none",
+                      background: "transparent",
+                      fontSize: "2rem",
+                      width: "100%",
+                      outline: "none",
+                    }}
+                    type="number"
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    background: "rgba(0,0,0,0.05)",
+                    borderRadius: "0.5rem",
+                    padding: ".5rem .75rem",
+                  }}
+                >
+                  <input
+                    style={{
+                      border: "none",
+                      background: "transparent",
+                      fontSize: "2rem",
+                      width: "100%",
+                      outline: "none",
+                    }}
+                    type="number"
+                  />
+                </div>
+
+              </div>
+              <Button type="primary" block>Swap</Button>
+            </div>
           </Col>
         </Row>
         <Row gutter={16}>

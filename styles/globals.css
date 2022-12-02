@@ -41,9 +41,17 @@ a {
 
 /* wallet page */
 .balance-card {
-  border: "1px solid black";
-  height: "270px";
-  border-radius: "1rem";
-  padding: "1.5rem";
+  border: 1px solid black;
+  height: 270px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.exchange-card {
+  border: 1px solid black;
+  height: 250px;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
   position: relative;
 }
